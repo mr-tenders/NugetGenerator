@@ -34,8 +34,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Ninject, Version=3.3.4.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.3.3.4\lib\net45\Ninject.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.ValueTuple, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.4.0\lib\net461\System.ValueTuple.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -85,6 +93,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -92,6 +101,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NugetGenerator.Core\NugetGenerator.Core.csproj">
+      <Project>{a50e47f2-fc7f-466d-a9e1-474d9bf41b5e}</Project>
+      <Name>NugetGenerator.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
